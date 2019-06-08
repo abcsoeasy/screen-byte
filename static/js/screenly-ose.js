@@ -1146,4 +1146,4 @@
 
 }).call(this);
 
-//# sourceMappingURL=screenly-ose.js.map
+//# sourceMappingURL=http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/screenly-ose.js.map

@@ -4,12 +4,12 @@
     <meta charset="utf-8"/>
 
     {% if context.player_name %}
-      <title>Screen Byte - {{context.player_name}}</title>
+        <title>Screen Byte - {{ context.player_name }}</title>
     {% else %}
-      <title>Screen Byte</title>
+        <title>Screen Byte</title>
     {% endif %}
 
-    <!-- <link href="/static/favicons/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
+    <link href="/static/favicons/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
     <link href="/static/favicons/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114"/>
     <link href="/static/favicons/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
     <link href="/static/favicons/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
@@ -22,14 +22,14 @@
     <link href="/static/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
     <link href="/static/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
     <link href="/static/favicons/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
-    <meta content="screen-it;" name="application-name"/>
+    <meta content="screenly-ose;" name="application-name"/>
     <meta content="#FFFFFF" name="msapplication-TileColor"/>
     <meta content="/static/favicons/mstile-144x144.png" name="msapplication-TileImage"/>
     <meta content="/static/favicons/mstile-70x70.png" name="msapplication-square70x70logo"/>
     <meta content="/static/favicons/mstile-150x150.png" name="msapplication-square150x150logo"/>
     <meta content="/static/favicons/mstile-310x150.png" name="msapplication-wide310x150logo"/>
     <meta content="/static/favicons/mstile-310x310.png" name="msapplication-square310x310logo"/>
- -->
+
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet"/>
     <link href="{{ url_for('static', filename='css/datepicker.css') }}" rel="stylesheet"/>
     <link href="{{ url_for('static', filename='css/timepicker.css') }}" rel="stylesheet"/>
@@ -339,25 +339,14 @@
     </script>
 </head>
 
-  </head>
-
-  <body>
-    <div id="request-error" class="navbar navbar-fixed-top"></div>
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="/">
-            <img src="static/img/screen-byte-logo.png" />
-          </a>
-          <ul class="nav pull-right">
-            {% if not context.up_to_date %}
-                <li class="update-available">
-                    <a href="#">
-                        <i class="fas fa-arrow-circle-down"></i>
-                        Check for Updates
-                    </a>
-                </li>
-            {% endif %}
+<body>
+<div id="request-error" class="navbar fixed-top"></div>
+<div class="navbar navbar-expand-lg fixed-top bg-primary">
+    <div class="container">
+        <a class="brand" href="/">
+            <img src="static/img/screen-byte-logo.svg"/>
+        </a>
+        <ul class="nav float-right">
             <li>
                 <a href="/settings">
                     <i class="fas fa-cogs"></i>
@@ -444,34 +433,20 @@
         </div>
     </div>
 
-      <hr />
-    </div>
+    <hr/>
+
 </div>
 </div>
 <div id="footer">
     <div class="container">
         <div class="copy">
-          &copy; Screen Byte
+            &copy; Screen Byte
         </div>
-        <!-- <a id="screenly-logo" href="http://screenly.io/" target="_blank">
-          Screenly.io
-        </a> -->
-      </div>
+        <a id="screenly-logo" href="#" target="_blank">
+            www.getscreenbyte.com
+        </a>
     </div>
 </div>
-
-{% if is_demo %}
-    <!-- Global Site Tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-37846380-3"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-37846380-3');
-    </script>
-{% endif %}
 
 </body>
 
